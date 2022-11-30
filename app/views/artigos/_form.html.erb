@@ -1,0 +1,27 @@
+<%= form_with(model: artigo) do |form| %>
+  <% if artigo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artigo.errors.count, "error") %> prohibited this artigo from being saved:</h2>
+
+      <ul>
+        <% artigo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Titulo, style: "display: block" %>
+    <%= form.text_field :Titulo %>
+  </div>
+
+  <div>
+    <%= form.label :Descrição, style: "display: block" %>
+    <%= form.text_area :Descrição %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

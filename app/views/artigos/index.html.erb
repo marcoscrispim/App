@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Artigos</h1>
+
+<div id="artigos">
+  <% @artigos.each do |artigo| %>
+    <%= render artigo %>
+    <p>
+      <%= link_to "Show this artigo", artigo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New artigo", new_artigo_path %>
