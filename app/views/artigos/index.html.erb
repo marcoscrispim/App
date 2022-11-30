@@ -6,9 +6,9 @@
   <% @artigos.each do |artigo| %>
     <%= render artigo %>
     <p>
-      <%= link_to "Show this artigo", artigo %>
+      <%= link_to "Ver", artigo %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New artigo", new_artigo_path %>
+<%= link_to "Novo artigo", new_artigo_path %>
