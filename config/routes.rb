@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  root "artigos#index"
   resources :artigos
+  root "artigos#index"
+
+  resources :artigos do
+    resources :comentarios
+  end
 end
